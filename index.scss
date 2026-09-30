@@ -46,6 +46,15 @@ $title-num:#eee;
   font-weight: lighter;
 }
 // ------- common -------//
+.flair {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 999999999;
+}
 .home{
   display: flex;
   align-items: center;
@@ -553,22 +562,56 @@ $title-num:#eee;
   }
 }
 .contact{
+  .puzzles{
+    width: 100%;
+    position: relative;
+  }
+  .puzzle02,
+  .puzzle03{
+    width: 460px;
+  }
+  .puzzle01,
+  .puzzle04{
+    width: 360px;
+  }
+  .puzzle01{
+  }
+  .puzzle02{
+    left: 261px;
+  }
+  .puzzle03{
+    top: 270px;
+  }
+  .puzzle04{
+    left: 360px;
+    top: 359px;
+  }
   .puzzle01,
   .puzzle02,
   .puzzle03,
   .puzzle04{
-    position: relative;
-    width: calc((100% - 400px)/2);
-    div:first-child{
-    }
-    div:last-child{
+    position: absolute;
+    .puzzle01_inner{
       position: absolute;
+      top: 30%; left: 20%;
+    }
+    .puzzle02_inner{
+      position: absolute;
+      top: 30%; left: 20%;
+    }
+    .puzzle03_inner{
+      position: absolute;
+      top: 30%; left: 0%;
+    }
+    .puzzle04_inner{
+      position: absolute;
+      top: 30%; left: 20%;
     }
   }
   .puzzle03{
     .puzzle03_inner{
       img{
-        width: 320px;
+        width: 240px;
       }
     }
   }

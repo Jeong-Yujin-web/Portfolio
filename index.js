@@ -24,7 +24,6 @@ form.addEventListener('submit', function (e) {
       console.error('EmailJS ERROR:', error);
     });
 });
-
 const projectRadios = document.querySelectorAll(
   '.project > input[type="radio"]'
 );
@@ -34,6 +33,19 @@ const projectTabs = document.querySelectorAll(
 const projectBoxes = document.querySelectorAll(
   '.project_box'
 );
+// gsap
+gsap.set(".flair", {
+  xPercent: -50,
+  yPercent: -50
+});
+
+const xSetter = gsap.quickSetter(".flair", "x", "px");
+const ySetter = gsap.quickSetter(".flair", "y", "px");
+
+window.addEventListener("mousemove", (e) => {
+  xSetter(e.clientX);
+  ySetter(e.clientY);
+});
 
 let currentIndex = 0;
 // 프로젝트 변경

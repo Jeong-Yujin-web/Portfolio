@@ -40,6 +40,7 @@
   </script>
   </head>
 <body>
+  <div class="flair flair--2"><img src="./images/cursor.png" alt="커서이미지"></div>
   <section class="home">
     <div class="home_inner">
       <div class="title">
@@ -478,41 +479,42 @@
       <p>04</p>
       <p>CONTACT</p>
     </div>
-    <div class="puzzle01">
-      <div class="puzzle01_outer">
-        <img src="./images/puzzle01.png" alt="퍼즐01">
+    <div class="puzzles">
+      <div class="puzzle01">
+        <div class="puzzle01_outer">
+          <img src="./images/puzzle01.png" alt="퍼즐01">
+        </div>
+        <div class="puzzle01_inner">
+          <p>Phone</p>
+          <p>010.6647.9379</p>
+          <p>E-mail</p>
+          <p>a66479379@gmail.com</p>
+        </div>
       </div>
-      <div class="puzzle01_inner">
-        <p>Phone</p>
-        <p>010.6647.9379</p>
-        <p>E-mail</p>
-        <p>a66479379@gmail.com</p>
+      <div class="puzzle02">
+        <div class="puzzle02_outer">
+          <img src="./images/puzzle02.png" alt="퍼즐02">
+        </div>
+        <div class="puzzle02_inner">
+          <form id="contact-form">
+            <div>
+              <label for="from_name">성함 또는 회사명</label>
+              <input type="text" id="from_name" name="from_name" required>
+            </div>
+            <div>
+              <label for="user_email">이메일</label>
+              <input type="email" id="user_email" name="user_email" required>
+            </div>
+            <div>
+              <label for="message">메시지</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <input type="submit"></input>
+          </form>
+        </div>
       </div>
-    </div>
-    <div class="puzzle02">
-      <div class="puzzle02_outer">
-        <img src="./images/puzzle02.png" alt="퍼즐02">
-      </div>
-      <div class="puzzle02_inner">
-        <form id="contact-form">
-          <div>
-            <label for="from_name">성함 또는 회사명</label>
-            <input type="text" id="from_name" name="from_name" required>
-          </div>
-          <div>
-            <label for="user_email">이메일</label>
-            <input type="email" id="user_email" name="user_email" required>
-          </div>
-          <div>
-            <label for="message">메시지</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <input type="submit"></input>
-        </form>
-      </div>
-    </div>
-    <div class="puzzle03">
-      <div class="puzzle03_outer">
+      <div class="puzzle03">
+        <div class="puzzle03_outer">
         <img src="./images/puzzle03.png" alt="퍼즐03">
       </div>
       <div class="puzzle03_inner">
@@ -524,13 +526,14 @@
         <img src="./images/puzzle04.png" alt="퍼즐04">
       </div>
       <div class="puzzle04_inner">
-        <i class="fa-brands fa-instagram"><a href="#!"></a></i>
-        <p><a href="#!">ko_yu_working_holiday</a></p>
-        <i class="fa-brands fa-facebook-f"><a href="#!"></a></i>
-        <p><a href="#!">Yujin Jeong</a></p>
+          <i class="fa-brands fa-instagram"><a href="#!"></a></i>
+          <p><a href="#!">ko_yu_working_holiday</a></p>
+          <i class="fa-brands fa-facebook-f"><a href="#!"></a></i>
+          <p><a href="#!">Yujin Jeong</a></p>
+        </div>
+        <div class="center">감사합니다.</div>
       </div>
     </div>
-    <div class="center">감사합니다.</div>
   </section>
 </body>
 </html>

@@ -51,6 +51,16 @@ section .subtitle p:last-child {
   color: #222;
 }
 
+.flair {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 999999999;
+}
+
 .home {
   display: flex;
   align-items: center;
@@ -631,6 +641,66 @@ section .subtitle p:last-child {
   height: 300px;
 }
 
+.contact .puzzles {
+  width: 100%;
+  position: relative;
+}
+.contact .puzzle02,
+.contact .puzzle03 {
+  width: 460px;
+}
+.contact .puzzle01,
+.contact .puzzle04 {
+  width: 360px;
+}
+.contact .puzzle02 {
+  left: 261px;
+}
+.contact .puzzle03 {
+  top: 270px;
+}
+.contact .puzzle04 {
+  left: 360px;
+  top: 359px;
+}
+.contact .puzzle01,
+.contact .puzzle02,
+.contact .puzzle03,
+.contact .puzzle04 {
+  position: absolute;
+}
+.contact .puzzle01 .puzzle01_inner,
+.contact .puzzle02 .puzzle01_inner,
+.contact .puzzle03 .puzzle01_inner,
+.contact .puzzle04 .puzzle01_inner {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+.contact .puzzle01 .puzzle02_inner,
+.contact .puzzle02 .puzzle02_inner,
+.contact .puzzle03 .puzzle02_inner,
+.contact .puzzle04 .puzzle02_inner {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+.contact .puzzle01 .puzzle03_inner,
+.contact .puzzle02 .puzzle03_inner,
+.contact .puzzle03 .puzzle03_inner,
+.contact .puzzle04 .puzzle03_inner {
+  position: absolute;
+  top: 30%;
+  left: 0%;
+}
+.contact .puzzle01 .puzzle04_inner,
+.contact .puzzle02 .puzzle04_inner,
+.contact .puzzle03 .puzzle04_inner,
+.contact .puzzle04 .puzzle04_inner {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
 .contact .puzzle03 .puzzle03_inner img {
-  width: 320px;
+  width: 240px;
 }/*# sourceMappingURL=index.css.map */
