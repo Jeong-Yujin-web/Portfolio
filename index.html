@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>portfolio</title>
+  <link rel="icon" type="image/png" href="./images/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <!-- font -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <!-- scss -->
+  <link rel="stylesheet" href="./index.css">
+  <!-- email_js -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="./js/contact.js" defer></script>
+  <!-- js -->
+  <script src="./index.js" defer></script>
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.2.2/jquery.mousewheel.min.js"></script>
+  <!-- gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollToPlugin.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded',function(){
+      const title = document.querySelector('.title');
+      gsap.from(title,{
+        x:-1500,
+        duration:1.3,
+        ease: 'elastic.out(1, 0.8)'
+      })
+      const txtEls = document.querySelectorAll('.title_bottom p');
+      txtEls.forEach((txtEl, index)=>{
+        gsap.to(txtEl,1,{
+          delay:index*0.5,
+          opacity:1,
+        });
+      });
+    });
+  </script>
+  </head>
+<body>
+  <section class="home">
+    <div class="home_inner">
+      <div class="title">
+        <h1>
+          From zer0,<br>
+          To developer
+        </h1>
+        <div class="name">
+          <p>YUJIN</p>
+          <p>JEONG</p>
+        </div>
+      </div>
+      <div class="title_bottom">
+        <p>안녕하세요</p>
+        <p>컴맹에서 주니어 개발자로, 이제는 시니어 개발자를 향해 성장 중인 정유진입니다.</p>
+        <p>각 나라의 문화와 언어를 알면 그 여행이 배로 즐겁고 쉬워지듯,</p>
+        <p>다양한 문법과 기술을 익혀 사용자와 개발자 모두에게 즐겁고 편안한 콘텐츠를 만들어가고 싶습니다.</p>
+      </div>
+    </div>
+  </section>
+  <section class="profile">
+    <div class="subtitle">
+      <p>01</p>
+      <p>PROFILE</p>
+    </div>
+    <div class="outer">
+      <div class="inner_left">
+        <div class="img">
+          <img src="./images/me01.jpeg" alt="내 이미지">
+        </div>
+        <div class="todo">
+          <p class="hover">Mouse!</p>
+          <div class="todo_puzzle01">
+            <img  src="./images/puzzle_6EA8E8.png" alt="퍼즐이미지01">
+            <div class="todo_text01">
+              <p>좋아하는 것</p>
+              <p>#퍼즐  #게임  #여행</p>
+            </div>
+          </div>
+          <div class="todo_puzzle02">
+            <img  src="./images/puzzle_6EA8E8.png" alt="퍼즐이미지02">
+            <div class="todo_text02">
+              <p>하고싶은 일</p>
+              <p>#기능 구현  #UI/UX개발  #각종 프로젝트</p>
+            </div>
+          </div>
+          <div class="todo_puzzle03">
+            <img src="./images/puzzle_6EA8E8.png" alt="퍼즐이미지03">
+            <div class="todo_text03">
+              <p>현재 다짐</p>
+              <p>#열정  #책임감  #성장</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="inner_right">
+        <input type="radio"  name="gender" id="info" checked>
+        <input type="radio" name="gender" id="act">
+        <div class="tab">
+          <label for="info" class="info">Info.</label>
+          <label for="act" class="act">Act.</label>
+        </div>
+        <div class="tab_box01">
+          <p class="hover">Tab!</p>
+          <ul class="text_title">
+            <li>Name</li>
+            <li>Birth</li>
+            <li>Address</li>
+            <li>Education</li>
+            <li>Career</li>
+          </ul>
+          <ul>
+            <div class="text_text">
+              <li>정유진</li>
+            </div>
+            <div class="text_text">
+              <li>1998.07.25</li>
+            </div>
+            <div class="text_text">
+              <li>부산광역시 (이사 예정)</li>
+            </div>
+            <div class="text_text">
+              <li>26.04~26.09 - 그린컴퓨터 아카데미 수료(프론트엔드 개발자 과정)</li>
+              <li>17.02~21.02 - 경남정보대학교 졸업(전공심화과정 졸업)</li>
+              <li>14.02~17.02 - 경남여자고등학교 졸업</li>
+            </div>
+            <div class="text_text">
+              <li>24.12~25.10 - TIS - Sentry, LSO, Watering crew</li>
+              <li>24.01~25.09 - ALS Geochemistry</li>
+              <li>20.02~23.02 - 경남정보대학교 부속유치원</li>
+            </div>
+          </ul>
+        </div>
+        <div class="tab_box02">
+          <p class="hover">Tab!</p>
+          <ul class="text_title">
+            <li>Activity history</li>
+          </ul>
+          <ul class="text_text">
+            <li>학급 임원 활동 - 초·중·고등학교 재학 기간 동안 지속적인 학급 임원 활동</li>
+            <li>선도부 및 컵스카우트 단장활동 - 교내 질서 및 생활지도, 협동 및 리더십 경험</li>
+            <li>학생 봉사활동 - 총 125.5시간, 51건의 봉사활동 참여</li>
+            <li>워킹홀리데이 - 해외 생활을 통한 새로운 환경 적응 및 자기주도적 경험</li>
+            <li>해외 문화 교류 - 다양한 국가의 문화와 사람들을 접하며 유연한 사고 증진</li>
+            <li>국내외 아르바이트 - 다양한 직종 및 근무 환경에서의 실무 경험과 현장 적응 경험</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="slogan">
+        <ul>
+          <li>Every puzzle has a solution</li>
+          <li>Every puzzle has a solution</li>
+          <li>Every puzzle has a solution</li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+      let roller=document.querySelector('.slogan');
+      roller.id='roller01';
+      let clone=roller.cloneNode(true)
+      clone.id='roller02';
+      document.querySelector('.wrap').appendChild(clone);
+      document.querySelector('#roller01').style.left='0px';
+      document.querySelector('#roller02').style.left=document.querySelector('.wrap ul').offsetWidth + 'px';
+      roller.classList.add('original');
+      clone.classList.add('clone');
+    </script>
+  </section>
+  <section class="skill">
+    <div class="subtitle">
+      <p>02</p>
+      <p>SKILL</p>
+    </div>
+    <div class="skill_box">
+      <div class="box_left01">
+        <p class="hover">Mouse!</p>
+          <img src="./images/markup.png" alt="마크업 이미지">
+        <p>Markup</p>
+      </div>
+      <div class="box_right">
+        <div><img src="./images/HTML5.png" alt="HTML5"><p>HTML5</p></div>
+        <div><img src="./images/CSS3.png" alt="CSS3"><p>CSS3</p></div>
+        <div><img src="./images/SASS.png" alt="SASS"><p>SASS</p></div>
+      </div>
+      <div class="markup_popup">
+        <div class="popup_outer">
+          <div class="popup_left">
+            <img src="./images/markup.png" alt="마크업이미지">
+            <p>Markup</p>
+          </div>
+          <ul class="popup_right">
+            <li class="popup_subtitle">HTML5</li>
+            <li>- 코드의 기본 속성과 요소를 익히고 작성 문법 습득</li>
+            <li>- 칼럼 그리드 시스템에 맞는 레이아웃 활용</li>
+            <li class="popup_subtitle">CSS</li>
+            <li>- 기초 UI 설계 및 기본 문법 습득</li>
+            <li class="popup_subtitle">SASS</li>
+            <li>- React Class및 function형 컴포넌트 이해 및 설계 가능</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="skill_box">
+      <div class="box_left02">
+
+        <img src="./images/language.png" alt="언어 이미지" class="language">
+        <p>Language</p>
+      </div>
+      <div class="box_right">
+        <div><img src="./images/JavaScript.png" alt="Java Script"><p>Java Script</p></div>
+        <div><img src="./images/JSON.png" alt="JSON"><p>JSON</p></div>
+        <div><img src="./images/SQL.png" alt="SQL"><p>SQL</p></div>
+      </div>
+      <div class="language_popup">
+        <div class="popup_outer">
+          <div class="popup_left">
+              <img src="./images/language.png" alt="언어이미지">
+            <p>Language</p>
+          </div>
+          <ul class="popup_right">
+            <li class="popup_subtitle">
+              JavaScript (VanilaJS)</li>
+            <li>- VanilaJS 자바스크립트 기본 문법 습득</li>
+            <li class="popup_subtitle">JSON</li>
+            <li>- 다양한 데이터 작성 및 바인딩 가능</li>
+            <li class="popup_subtitle">SQL</li>
+            <li>- 다양한 데이터 작성 및 바인딩 가능</li>
+            <li>- 쿼리문 작성 가능</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="skill_box">
+      <div class="box_left03">
+        <img src="./images/frontend.png" alt="프론트엔드 이미지">
+        <p>Frontend</p>
+      </div>
+      <div class="box_right">
+        <div><img src="./images/jQuery.png" alt="jQuery"><p>jQuery</p></div>
+        <div><img src="./images/REACT.png" alt="REACT"><p>REACT</p></div>
+        <div><img src="./images/NodeJs.png" alt="Node Js"><p>Node Js</p></div>
+        <div><img src="./images/ReactRouter.png" alt="React Router"><p>React Router</p></div>
+        <div><img src="./images/GitHub.png" alt="GitHub"><p>GitHub</p></div>
+        <div><img src="./images/Figma.png" alt="Figma"><p>Figma</p></div>
+      </div>
+      <div class="frontend_popup">
+        <div class="popup_outer">
+          <div class="popup_left">
+            <img src="./images/frontend.png" alt="언어이미지">
+            <p>Frontend</p>
+          </div>
+          <ul class="popup_right">
+            <li class="popup_subtitle">JQuery</li>
+            <li>- JQuery 문법 습득</li>
+            <li>- 이벤트의 개념과 이벤트 처리 방식의 이해 및 활용 가능</li>
+            <li class="popup_subtitle">React</li>
+            <li>- React Class및 function형 컴포넌트 이해 및 설계 가능</li>
+            <li>- props 문법 습득 및 사용 가능</li>
+            <li class="popup_subtitle">Node Js</li>
+            <li class="popup_subtitle">React Router</li>
+            <li class="popup_subtitle">GitHub</li>
+            <li class="popup_subtitle">Figma</li>
+            <li>- design  활용</li>
+            <li>- 에셋 및 플러그인, 변수 활용</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="project">
+    <div class="subtitle">
+      <p>03</p>
+      <p>PROJECT</p>
+    </div>
+    <input type="radio" name="project" id="project01" class="project01" checked>
+    <input type="radio" name="project" id="project02"  class="project02">
+    <input type="radio" name="project" id="project03"  class="project03">
+    <input type="radio" name="project" id="project04"  class="project04">
+    <div class="project_tab">
+      <p class="hover">Mouse!</p>
+      <label for="project01" class="project01"><img src="./images/puzzle_6EA8E8.png" alt="project_tab"></label>
+      <div class="project01_title">
+        <p>01.</p>
+        <span>Adaptive Web Project</span>
+      </div>
+      <label for="project02" class="project02"><img src="./images/puzzle_6EA8E8.png" alt="project_tab"></label>
+      <div class="project02_title">
+        <p>02.</p>
+        <span>Responsive Web Project</span>
+      </div>
+      <label for="project03" class="project03"><img src="./images/puzzle_6EA8E8.png" alt="project_tab"></label>
+      <div class="project03_title">
+        <p>03.</p>
+        <span>React Web Project</span>
+      </div>
+      <label for="project04" class="project04"><img src="./images/puzzle_6EA8E8.png" alt="project_tab"></label>
+      <div class="project04_title">
+        <p>04.</p>
+        <span>Ai-based App Project</span>
+      </div>
+    </div>
+    <div class="project_box project_box01">
+      <i class="fa-solid fa-chevron-left"></i>
+        <div class="project_inner">
+          <div class="project_left">
+            <p>개인 프로젝트 - BEBE 쇼핑몰 웹/모바일 사이트</p>
+            <div class="text_top">
+              <ul class="text_left">
+                <li>개발 서비스</li>
+              </ul>
+              <ul class="text_right">
+                <li>데이터 구축-로그인, 상품 옵션 필터링 기능</li>
+                <li>Q&A작성 서비스</li>
+              </ul>
+            </div>
+            <hr></hr>
+            <div class="text_bottom">
+              <ul class="text_left">
+                <li>제작기간</li>
+                <li>코딩기간</li>
+                <li>에피소드</li>
+                <li>스킬</li>
+              </ul>
+              <ul class="text_right">
+                <li>22일</li>
+                <li>14일</li>
+                <li>에피소드</li>
+                <li>HTML, CSS, jQuery, JS, JSON</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project_right">
+            <div>
+              <img src="./images/project01.png" alt="프로젝트01">
+            </div>
+            <div class="icon_box">
+              <i class="fa-brands fa-github"><a href=""></a></i>
+              <i class="fa-solid fa-globe"><a href=""></a></i>
+              <i class="fa-solid fa-file-lines"><a href=""></a></i>
+            </div>
+          </div>
+        </div>
+      <i class="fa-solid fa-chevron-right"></i>
+    </div>
+    <div class="project_box project_box02">
+      <i class="fa-solid fa-chevron-left"></i>
+        <div class="project_inner">
+          <div class="project_left">
+            <p>팀 프로젝트 - Visit Jeju 반응형 사이트 리뉴얼</p>
+            <div class="text_top">
+              <ul class="text_left">
+                <li>개발 서비스</li>
+              </ul>
+              <ul class="text_right">
+                <li>웹, 태블릿, 모바일 반응형 제공</li>
+                <li>로그인 기능 서비스</li>
+              </ul>
+            </div>
+            <hr>
+            <div class="text_bottom">
+              <ul class="text_left">
+                <li>제작기간</li>
+                <li>코딩기간</li>
+                <li>에피소드</li>
+                <li>스킬</li>
+              </ul>
+              <ul class="text_right">
+                <li>22일</li>
+                <li>16일</li>
+                <li>에피소드</li>
+                <li>HTML, SASS, jQuery, JS, JSON</li>
+              </ul>
+            </div>
+          </div>
+          <div class="project_right">
+            <div>
+              <img src="./images/project02.png" alt="프로젝트01">
+            </div>
+            <div class="icon_box">
+              <i class="fa-brands fa-github"><a href=""></a></i>
+              <i class="fa-solid fa-globe"><a href=""></a></i>
+              <i class="fa-solid fa-file-lines"><a href=""></a></i>
+            </div>
+          </div>
+        </div>
+        <i class="fa-solid fa-chevron-right"></i>
+      </div>
+    <div class="project_box project_box03">
+      <i class="fa-solid fa-chevron-left"></i>
+        <div class="project_inner">
+          <div class="project_left">
+            <p>팀 프로젝트 - Visit Jeju 반응형 사이트 리뉴얼</p>
+            <div class="text_top">
+              <ul class="text_left">
+                <li>개발 서비스</li>
+              </ul>
+              <ul class="text_right">
+                <li>웹, 태블릿, 모바일 반응형 제공</li>
+              <li>로그인 기능 서비스</li>
+            </ul>
+          </div>
+          <hr></hr>
+          <div class="text_bottom">
+            <ul class="text_left">
+              <li>제작기간</li>
+              <li>코딩기간</li>
+              <li>에피소드</li>
+              <li>스킬</li>
+            </ul>
+            <ul class="text_right">
+              <li>22일</li>
+              <li>16일</li>
+              <li>에피소드</li>
+              <li>HTML, SASS, jQuery, JS, JSON</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project_right">
+          <div>
+            <img src="./images/project02.png" alt="프로젝트01">
+          </div>
+          <div class="icon_box">
+            <i class="fa-brands fa-github"><a href=""></a></i>
+            <i class="fa-solid fa-globe"><a href=""></a></i>
+            <i class="fa-solid fa-file-lines"><a href=""></a></i>
+          </div>
+        </div>
+      </div>
+      <i class="fa-solid fa-chevron-right"></i>
+    </div>
+    <div class="project_box project_box04">
+      <i class="fa-solid fa-chevron-left"></i>
+      <div class="project_inner">
+        <div class="project_left">
+        <p>개인 프로젝트 - Pet Buddy 생상형 Ai기반 앱</p>
+        <div class="text_top">
+          <ul class="text_left">
+            <li>개발 서비스</li>
+          </ul>
+          <ul class="text_right">
+            <li>생산형 Ai를 활용해 제작한 강아지 산책앱</li>
+          </ul>
+        </div>
+        <hr></hr>
+        <div class="text_bottom">
+          <ul class="text_left">
+            <li>제작기간</li>
+            <li>에피소드</li>
+            <li>스킬</li>
+          </ul>
+          <ul class="text_right">
+            <li>8일</li>
+            <li>에피소드</li>
+            <li>Figma</li>
+          </ul>
+        </div>
+      </div>
+      <div class="project_right">
+        <div>
+          <img src="./images/project04.png" alt="프로젝트01">
+        </div>
+        <div class="icon_box">
+          <i class="fa-brands fa-github"><a href=""></a></i>
+          <i class="fa-solid fa-globe"><a href=""></a></i>
+          <i class="fa-solid fa-file-lines"><a href=""></a></i>
+        </div>
+      </div>
+      </div>
+      <i class="fa-solid fa-chevron-right"></i>
+    </div>
+  </section>
+  <section class="contact">
+    <div class="subtitle">
+      <p>04</p>
+      <p>CONTACT</p>
+    </div>
+    <div class="puzzle01">
+      <div class="puzzle01_outer">
+        <img src="./images/puzzle01.png" alt="퍼즐01">
+      </div>
+      <div class="puzzle01_inner">
+        <p>Phone</p>
+        <p>010.6647.9379</p>
+        <p>E-mail</p>
+        <p>a66479379@gmail.com</p>
+      </div>
+    </div>
+    <div class="puzzle02">
+      <div class="puzzle02_outer">
+        <img src="./images/puzzle02.png" alt="퍼즐02">
+      </div>
+      <div class="puzzle02_inner">
+        <form id="contact-form">
+          <div>
+            <label for="from_name">성함 또는 회사명</label>
+            <input type="text" id="from_name" name="from_name" required>
+          </div>
+          <div>
+            <label for="user_email">이메일</label>
+            <input type="email" id="user_email" name="user_email" required>
+          </div>
+          <div>
+            <label for="message">메시지</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <input type="submit"></input>
+        </form>
+      </div>
+    </div>
+    <div class="puzzle03">
+      <div class="puzzle03_outer">
+        <img src="./images/puzzle03.png" alt="퍼즐03">
+      </div>
+      <div class="puzzle03_inner">
+        <img src="./images/me.jpeg" alt="정유진이미지">
+      </div>
+    </div>
+    <div class="puzzle04">
+      <div class="puzzle04_outer">
+        <img src="./images/puzzle04.png" alt="퍼즐04">
+      </div>
+      <div class="puzzle04_inner">
+        <i class="fa-brands fa-instagram"><a href="#!"></a></i>
+        <p><a href="#!">ko_yu_working_holiday</a></p>
+        <i class="fa-brands fa-facebook-f"><a href="#!"></a></i>
+        <p><a href="#!">Yujin Jeong</a></p>
+      </div>
+    </div>
+    <div class="center">감사합니다.</div>
+  </section>
+</body>
+</html>
