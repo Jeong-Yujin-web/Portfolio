@@ -16,7 +16,7 @@ form.addEventListener('submit', function (e) {
       this
     )
     .then(function () {
-      alert('메일이 성공적으로 전송되었습니다.');
+      alert('메일이 성공적으로 전송되었습니다. 감사합니다^^');
       form.reset();
     })
     .catch(function (error) {
@@ -33,21 +33,6 @@ const projectTabs = document.querySelectorAll(
 const projectBoxes = document.querySelectorAll(
   '.project_box'
 );
-// gsap
-gsap.set(".flair", {
-  xPercent: -50,
-  yPercent: -50
-});
-
-const xSetter = gsap.quickSetter(".flair", "x", "px");
-const ySetter = gsap.quickSetter(".flair", "y", "px");
-
-window.addEventListener("mousemove", (e) => {
-  xSetter(e.clientX);
-  ySetter(e.clientY);
-});
-
-let currentIndex = 0;
 // 프로젝트 변경
 function showProject(index) {
 

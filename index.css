@@ -31,7 +31,7 @@ html {
 section {
   max-width: 1280px;
   margin: 0 auto;
-  padding-top: 30px;
+  padding-top: 100px;
   height: 100vh;
 }
 section .subtitle {
@@ -58,10 +58,53 @@ section .subtitle p:last-child {
   top: 0;
   left: 0;
   pointer-events: none;
-  z-index: 999999999;
+  z-index: 9999999;
+}
+
+.gnb {
+  width: 100%;
+  height: 60px;
+  background-color: #3B82F6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.gnb.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gnb ul {
+  width: 1280px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.gnb ul li {
+  width: 8%;
+  float: left;
+}
+
+.gnb ul li a {
+  display: block;
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+.gnb ul li a:hover {
+  color: #222;
+  font-weight: bold;
 }
 
 .home {
+  padding-top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -325,7 +368,7 @@ section .subtitle p:last-child {
   font-weight: bold;
   width: 10010px;
   position: absolute;
-  bottom: 100px;
+  bottom: 140px;
   left: -300px;
 }
 .profile .wrap .slogan.original {
@@ -381,6 +424,7 @@ section .subtitle p:last-child {
 .skill .skill_box .box_left01,
 .skill .skill_box .box_left02,
 .skill .skill_box .box_left03 {
+  width: 100px;
   position: relative;
   text-align: center;
   margin: 0 100px;
@@ -443,6 +487,7 @@ section .subtitle p:last-child {
   display: none;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
 }
 .skill .skill_box .markup_popup .popup_outer, .skill .skill_box .language_popup .popup_outer, .skill .skill_box .frontend_popup .popup_outer {
   display: flex;
@@ -597,9 +642,6 @@ section .subtitle p:last-child {
 .project .project_box .project_inner .project_left .text_bottom .text_right li {
   margin-bottom: 22px;
 }
-.project .project_box .project_right:first-child {
-  background-color: red;
-}
 .project .project_box .project_right {
   display: flex;
   flex-direction: column;
@@ -641,33 +683,110 @@ section .subtitle p:last-child {
   height: 300px;
 }
 
+.contact {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  background-image: radial-gradient(rgba(40, 90, 180, 0.05) 2px, transparent 2px);
+  background-size: 24px 24px;
+}
+.contact .contact_sub {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-left: 145px;
+  padding-top: 20px;
+  color: #3B82F6;
+  font-weight: 500;
+}
+.contact .contact_sub i {
+  display: block;
+  width: 70px;
+  height: 1px;
+  background: #4b8fe8;
+}
+.contact .left-message {
+  left: -220px;
+  top: 20px;
+  transform: rotate(-8deg);
+}
+.contact .left-message div {
+  margin-left: 60px;
+  margin-top: 10px;
+}
+.contact .left-message div img {
+  width: 80px;
+}
+.contact .left-message,
+.contact .right-message {
+  position: absolute;
+  cursor: grab;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: #6EA8E8;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.contact .right-message {
+  transform: rotate(8deg);
+  text-align: end;
+  right: -190px;
+  bottom: 50px;
+}
+.contact .right-message div {
+  margin-left: -30px;
+  margin-top: 10px;
+}
+.contact .right-message div img {
+  width: 100px;
+  transform: scaleX(-1);
+}
 .contact .puzzles {
-  width: 100%;
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 565px;
+  height: 564px;
+  display: flex;
   position: relative;
+}
+.contact .subtitle {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 .contact .puzzle02,
 .contact .puzzle03 {
-  width: 460px;
+  width: 360px;
 }
 .contact .puzzle01,
 .contact .puzzle04 {
-  width: 360px;
+  width: 282px;
+}
+.contact .puzzle01 {
+  left: 0;
+  top: 0;
 }
 .contact .puzzle02 {
-  left: 261px;
+  right: 0;
+  top: 0;
 }
 .contact .puzzle03 {
-  top: 270px;
+  left: 0;
+  bottom: 0;
 }
 .contact .puzzle04 {
-  left: 360px;
-  top: 359px;
+  right: 0;
+  bottom: 0;
 }
 .contact .puzzle01,
 .contact .puzzle02,
 .contact .puzzle03,
 .contact .puzzle04 {
   position: absolute;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 .contact .puzzle01 .puzzle01_inner,
 .contact .puzzle02 .puzzle01_inner,
@@ -677,30 +796,180 @@ section .subtitle p:last-child {
   top: 30%;
   left: 20%;
 }
+.contact .puzzle01 .puzzle01_inner p,
+.contact .puzzle02 .puzzle01_inner p,
+.contact .puzzle03 .puzzle01_inner p,
+.contact .puzzle04 .puzzle01_inner p {
+  margin-bottom: 3px;
+}
+.contact .puzzle01 .puzzle01_inner p:first-child, .contact .puzzle01 .puzzle01_inner p:nth-child(3),
+.contact .puzzle02 .puzzle01_inner p:first-child,
+.contact .puzzle02 .puzzle01_inner p:nth-child(3),
+.contact .puzzle03 .puzzle01_inner p:first-child,
+.contact .puzzle03 .puzzle01_inner p:nth-child(3),
+.contact .puzzle04 .puzzle01_inner p:first-child,
+.contact .puzzle04 .puzzle01_inner p:nth-child(3) {
+  color: #fff;
+}
+.contact .puzzle01 .puzzle01_inner p:nth-child(2),
+.contact .puzzle02 .puzzle01_inner p:nth-child(2),
+.contact .puzzle03 .puzzle01_inner p:nth-child(2),
+.contact .puzzle04 .puzzle01_inner p:nth-child(2) {
+  margin-bottom: 10px;
+}
+.contact .puzzle01 .puzzle01_inner p:last-child, .contact .puzzle01 .puzzle01_inner p:nth-child(2),
+.contact .puzzle02 .puzzle01_inner p:last-child,
+.contact .puzzle02 .puzzle01_inner p:nth-child(2),
+.contact .puzzle03 .puzzle01_inner p:last-child,
+.contact .puzzle03 .puzzle01_inner p:nth-child(2),
+.contact .puzzle04 .puzzle01_inner p:last-child,
+.contact .puzzle04 .puzzle01_inner p:nth-child(2) {
+  color: #fff;
+  font-size: 0.8rem;
+}
 .contact .puzzle01 .puzzle02_inner,
 .contact .puzzle02 .puzzle02_inner,
 .contact .puzzle03 .puzzle02_inner,
 .contact .puzzle04 .puzzle02_inner {
   position: absolute;
-  top: 30%;
-  left: 20%;
+  top: 12%;
+  left: 27%;
+  width: 240px;
+  padding: 18px 16px;
+  box-sizing: border-box;
+  background: rgba(30, 80, 160, 0.35);
+  border-radius: 12px;
+  color: #fff;
+}
+.contact .puzzle01 .puzzle02_inner form,
+.contact .puzzle02 .puzzle02_inner form,
+.contact .puzzle03 .puzzle02_inner form,
+.contact .puzzle04 .puzzle02_inner form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contact .puzzle01 .puzzle02_inner form > div,
+.contact .puzzle02 .puzzle02_inner form > div,
+.contact .puzzle03 .puzzle02_inner form > div,
+.contact .puzzle04 .puzzle02_inner form > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.contact .puzzle01 .puzzle02_inner label,
+.contact .puzzle02 .puzzle02_inner label,
+.contact .puzzle03 .puzzle02_inner label,
+.contact .puzzle04 .puzzle02_inner label {
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  color: #fff;
+}
+.contact .puzzle01 .puzzle02_inner input,
+.contact .puzzle01 .puzzle02_inner textarea,
+.contact .puzzle02 .puzzle02_inner input,
+.contact .puzzle02 .puzzle02_inner textarea,
+.contact .puzzle03 .puzzle02_inner input,
+.contact .puzzle03 .puzzle02_inner textarea,
+.contact .puzzle04 .puzzle02_inner input,
+.contact .puzzle04 .puzzle02_inner textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  color: #fff;
+}
+.contact .puzzle01 .puzzle02_inner input,
+.contact .puzzle02 .puzzle02_inner input,
+.contact .puzzle03 .puzzle02_inner input,
+.contact .puzzle04 .puzzle02_inner input {
+  padding: 4px 5px;
+}
+.contact .puzzle01 .puzzle02_inner textarea,
+.contact .puzzle02 .puzzle02_inner textarea,
+.contact .puzzle03 .puzzle02_inner textarea,
+.contact .puzzle04 .puzzle02_inner textarea {
+  padding: 4px 5px;
+  resize: none;
+}
+.contact .puzzle01 .puzzle02_inner input[type=submit],
+.contact .puzzle02 .puzzle02_inner input[type=submit],
+.contact .puzzle03 .puzzle02_inner input[type=submit],
+.contact .puzzle04 .puzzle02_inner input[type=submit] {
+  align-self: center;
+  margin-top: 6px;
+  border-radius: 5px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 0.8rem;
+  cursor: pointer;
 }
 .contact .puzzle01 .puzzle03_inner,
 .contact .puzzle02 .puzzle03_inner,
 .contact .puzzle03 .puzzle03_inner,
 .contact .puzzle04 .puzzle03_inner {
   position: absolute;
-  top: 30%;
-  left: 0%;
+  top: 26%;
+  left: 8%;
+}
+.contact .puzzle01 .puzzle03_inner img,
+.contact .puzzle02 .puzzle03_inner img,
+.contact .puzzle03 .puzzle03_inner img,
+.contact .puzzle04 .puzzle03_inner img {
+  border-radius: 12px 12px 12px 36px;
+  width: 220px;
+  height: 240px;
 }
 .contact .puzzle01 .puzzle04_inner,
 .contact .puzzle02 .puzzle04_inner,
 .contact .puzzle03 .puzzle04_inner,
 .contact .puzzle04 .puzzle04_inner {
   position: absolute;
-  top: 30%;
-  left: 20%;
+  top: 38%;
+  left: 36%;
+  color: #fff;
 }
-.contact .puzzle03 .puzzle03_inner img {
-  width: 240px;
+.contact .puzzle01 .puzzle04_inner i,
+.contact .puzzle02 .puzzle04_inner i,
+.contact .puzzle03 .puzzle04_inner i,
+.contact .puzzle04 .puzzle04_inner i {
+  font-size: 1.6rem;
+}
+.contact .puzzle01 .puzzle04_inner p,
+.contact .puzzle02 .puzzle04_inner p,
+.contact .puzzle03 .puzzle04_inner p,
+.contact .puzzle04 .puzzle04_inner p {
+  margin-bottom: 20px;
+}
+.contact .puzzle01 .puzzle04_inner p a,
+.contact .puzzle02 .puzzle04_inner p a,
+.contact .puzzle03 .puzzle04_inner p a,
+.contact .puzzle04 .puzzle04_inner p a {
+  font-size: 0.8rem;
+  color: #fff;
+}
+.contact .puzzle01:hover,
+.contact .puzzle02:hover,
+.contact .puzzle03:hover,
+.contact .puzzle04:hover {
+  animation: puzzle-hover 0.6s ease;
+}
+@keyframes puzzle-hover {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-12px) rotate(8deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(-8deg);
+  }
+  75% {
+    transform: translateY(-3px) rotate(4deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
 }/*# sourceMappingURL=index.css.map */
