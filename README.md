@@ -86,7 +86,7 @@ EmailJS를 활용하여 사용자가 Contact Form에 작성한 내용을
 
 ### GitHub
 
-https://jeong-yujin-web.github.io/
+https://jeong-yujin-web.github.io/Portfolio/
 
 
 ### 회고
