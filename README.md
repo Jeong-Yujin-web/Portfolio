@@ -60,10 +60,60 @@ GSAP를 활용하여 홈 화면의 메인 타이틀과
 메인 타이틀 등장 애니메이션
 하단 텍스트 순차 등장 애니메이션
 ```
+<details>
+<summary>코드 보기</summary>
+
+```js
+document.addEventListener('DOMContentLoaded', () => {
+  gsap.from('.title', {
+    x: -1500,
+    duration: 1.3,
+    ease: 'elastic.out(1, 0.8)'
+  });
+
+  gsap.from('.title_bottom p', {
+    opacity: 0,
+    delay: (index) => index * 0.5
+  });
+});
+</details>
+```
 ### 04. Contact Form
 ```text
 EmailJS를 활용하여 사용자가 Contact Form에 작성한 내용을
 이메일로 전달할 수 있도록 구현하였습니다.
+```
+<details>
+<summary>코드 보기</summary>
+
+```js
+(function () {
+  emailjs.init({
+    publicKey: 'La-mahUIgmG5LeYeq',
+  });
+})();
+
+const form = document.querySelector('#contact-form');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  emailjs
+    .sendForm(
+      'portfolio_email',
+      'template_elep9lr',
+      this
+    )
+    .then(function () {
+      alert('메일이 성공적으로 전송되었습니다. 감사합니다^^');
+      form.reset();
+    })
+    .catch(function (error) {
+      alert('메일 전송에 실패했습니다.');
+      console.error('EmailJS ERROR:', error);
+    });
+});
+</details>
 ```
 ## 🖥️ 실행 결과
 
