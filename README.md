@@ -76,16 +76,18 @@ document.addEventListener('DOMContentLoaded', () => {
     delay: (index) => index * 0.5
   });
 });
-</details>
 ```
+</details>
+
 ### 04. Contact Form
 ```text
 EmailJS를 활용하여 사용자가 Contact Form에 작성한 내용을
 이메일로 전달할 수 있도록 구현하였습니다.
 ```
+
 <details>
 <summary>코드 보기</summary>
-
+  
 ```js
 (function () {
   emailjs.init({
@@ -113,8 +115,9 @@ form.addEventListener('submit', function (e) {
       console.error('EmailJS ERROR:', error);
     });
 });
-</details>
 ```
+</details>
+
 ## 🖥️ 실행 결과
 
 ### Home
