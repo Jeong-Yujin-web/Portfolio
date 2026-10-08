@@ -61,7 +61,7 @@ GSAP를 활용하여 홈 화면의 메인 타이틀과
 하단 텍스트 순차 등장 애니메이션
 ```
 <details>
-<summary>코드 보기</summary>
+<summary>🔍 main.js (GSAP 애니메이션) 펼치기</summary>
 
 ```js
 document.addEventListener('DOMContentLoaded', () => {
@@ -96,7 +96,7 @@ EmailJS를 활용하여 사용자가 Contact Form에 작성한 내용을
 ```
 
 <details>
-<summary>코드 보기</summary>
+<summary>🔍 contact.js (EmailJS 메일 전송 로직) 펼치기</summary>
   
 ```js
 (function () {
