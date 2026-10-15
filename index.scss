@@ -467,6 +467,13 @@ $title-num:#eee;
         margin-top: -10px;
       }
     }
+    label.project01.active:hover,
+    label.project02.active:hover,
+    label.project03.active:hover,
+    label.project04.active:hover {
+      transform: none;
+      margin-top: 0;
+    }
     label.project01.active ~ .project01_title,
     label.project02.active ~ .project02_title,
     label.project03.active ~ .project03_title,
@@ -474,13 +481,13 @@ $title-num:#eee;
       display: block;
       background-color: $point-color;
     }
-    label.project01 img:hover,
-    label.project02 img:hover,
-    label.project03 img:hover,
-    label.project04 img:hover {
+    label.project01:hover,
+    label.project02:hover,
+    label.project03:hover,
+    label.project04:hover {
       display: block;
-        transform: rotate(45deg);
-        margin-top: -10px;
+      transform: rotate(45deg);
+      margin-top: -10px;
     }
     .project01_title,
     .project02_title,
@@ -527,17 +534,28 @@ $title-num:#eee;
           margin-bottom: 30px;
         }
         hr{margin-bottom: 30px;}
+        .text_bottom{
+          .text_left{
+            li{
+              &:last-child{
+                margin-top: 72px;
+              } 
+            }
+          }
+        }
         .text_top,
         .text_bottom{
           display: flex;
           .text_left{
+            width: 100px;
             font-size: 1.3rem;
             font-weight: 400;
             li{
-              margin-bottom: 16px;
+              margin-bottom: 16px; 
             }
           }
           .text_right{
+            width: 500px;
             margin-top: 4px;
             font-size: 1.0rem;
             font-weight: 300;
@@ -569,10 +587,15 @@ $title-num:#eee;
         justify-content: right;
         align-items: center;
         width: 340px;
-        color: $default-color;
-        i{
-          margin-left: 10px;
-          font-size: 1.6rem;
+        a{
+          i{
+            color: $default-color;
+            margin-left: 10px;
+            font-size: 1.6rem;
+          }
+          i:hover{
+            color: $point-color;
+          }
         }
       }
     }
@@ -580,9 +603,7 @@ $title-num:#eee;
       font-size: 2.8rem;
       color: $default-color;
     }
-    i:hover{
-      color: $point-color;
-    }
+    
   }
   .project_box.active{
     display: flex;
