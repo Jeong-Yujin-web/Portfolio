@@ -178,43 +178,59 @@ section .subtitle p:last-child {
   border-radius: 0 10px 0 0;
   margin-left: -23px;
 }
+.profile .outer .inner_right .tab_box01 {
+  padding-top: 30px;
+}
 .profile .outer .inner_right .tab_box01 .text_title {
   float: left;
-  font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0 80px;
 }
 .profile .outer .inner_right .tab_box01 .text_title li {
-  padding-top: 30px;
+  padding-top: 20px;
+  font-weight: 500;
 }
 .profile .outer .inner_right .tab_box01 .text_title li:last-child {
-  padding-top: 50px;
+  padding-top: 80px;
   padding-bottom: 60px;
 }
 .profile .outer .inner_right .tab_box01 .text_text {
-  font-size: 1rem;
-  font-weight: 300;
-  padding-top: 35px;
+  display: flex;
+  padding-top: 20px;
 }
-.profile .outer .inner_right .tab_box01 .text_text:last-child {
-  padding-top: 22px;
+.profile .outer .inner_right .tab_box01 .text_text .text_date {
+  margin-right: 20px;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+.profile .outer .inner_right .tab_box01 .text_text .text_date li {
+  margin-top: 10px;
+}
+.profile .outer .inner_right .tab_box01 .text_text .text_detail li {
+  margin-top: 7px;
 }
 .profile .outer .inner_right .tab_box02 .text_title {
-  font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0 80px;
 }
 .profile .outer .inner_right .tab_box02 .text_title li {
   padding: 30px 0;
 }
 .profile .outer .inner_right .tab_box02 .text_text {
-  font-size: 1rem;
   font-weight: 300;
   margin: 0 100px;
 }
+.profile .outer .inner_right .tab_box02 .text_text .text_date {
+  list-style-type: disc;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  padding-top: 30px;
+}
+.profile .outer .inner_right .tab_box02 .text_text .text_date:first-child {
+  padding-top: 0;
+}
 .profile .outer .inner_right .tab_box02 .text_text li {
-  padding-top: 20px;
-  list-style: disc;
+  padding-top: 10px;
 }
 .profile .outer .inner_right .tab_box01,
 .profile .outer .inner_right .tab_box02 {

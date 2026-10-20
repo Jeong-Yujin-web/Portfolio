@@ -167,44 +167,60 @@ $title-num:#eee;
         }
       }
       .tab_box01{
+        padding-top: 30px;
         .text_title{
           float: left;
-          font-size: 1.3rem;
-          font-weight: 400;
+          font-weight: 500;
           margin: 0 80px;
           li{
-            padding-top: 30px;
+            padding-top: 20px;
+            font-weight: 500;
             &:last-child{
-              padding-top: 50px;
+              padding-top: 80px;
               padding-bottom: 60px;
             }
           }
         }
         .text_text{
-          font-size: 1.0rem;
-          font-weight: 300;
-          padding-top: 35px;
-          &:last-child{
-            padding-top: 22px;
+          display: flex;
+          padding-top: 20px;
+          .text_date{
+            margin-right: 20px;
+            font-size: 0.8rem;
+            opacity: 0.8;
+            li{
+              margin-top: 10px;
+            }
+          }
+          .text_detail{
+            li{
+              margin-top: 7px;
+            }
           }
         }
       }
       .tab_box02{
         .text_title{
-          font-size: 1.3rem;
-          font-weight: 400;
+          font-weight: 500;
           margin: 0 80px;
           li{
             padding: 30px 0;
           }
         }
         .text_text{
-          font-size: 1.0rem;
           font-weight: 300;
           margin: 0 100px;
+          .text_date{
+            list-style-type: disc;
+            font-size: 0.8rem;
+            opacity: 0.8;
+            padding-top: 30px;
+            &:first-child{
+              padding-top: 0;
+            }
+          }
           li{
-            padding-top: 20px;
-            list-style: disc;
+            padding-top: 10px;
           }
         }
       }
