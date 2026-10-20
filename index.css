@@ -510,7 +510,7 @@ section .subtitle p:last-child {
   align-items: center;
   justify-content: center;
   width: 772px;
-  height: 322px;
+  padding: 30px 0;
   background-color: #f8f8f8;
   border-radius: 20px;
 }
@@ -524,6 +524,22 @@ section .subtitle p:last-child {
 .skill .skill_box .markup_popup .popup_outer .popup_left p, .skill .skill_box .language_popup .popup_outer .popup_left p, .skill .skill_box .frontend_popup .popup_outer .popup_left p {
   font-size: 1.2rem;
 }
+.skill .skill_box .markup_popup .popup_outer .popup_right .popup_subtitle, .skill .skill_box .language_popup .popup_outer .popup_right .popup_subtitle, .skill .skill_box .frontend_popup .popup_outer .popup_right .popup_subtitle {
+  margin-top: 20px;
+  font-weight: 500;
+  color: #777;
+  font-size: 0.8rem;
+}
+.skill .skill_box .markup_popup .popup_outer .popup_right .popup_subtitle:first-child, .skill .skill_box .language_popup .popup_outer .popup_right .popup_subtitle:first-child, .skill .skill_box .frontend_popup .popup_outer .popup_right .popup_subtitle:first-child {
+  margin-top: 0;
+}
+.skill .skill_box .markup_popup .popup_outer .popup_right li, .skill .skill_box .language_popup .popup_outer .popup_right li, .skill .skill_box .frontend_popup .popup_outer .popup_right li {
+  margin-bottom: 6px;
+}
+.skill .skill_box .markup_popup .popup_outer .popup_right li:last-child, .skill .skill_box .language_popup .popup_outer .popup_right li:last-child, .skill .skill_box .frontend_popup .popup_outer .popup_right li:last-child {
+  margin-bottom: 0;
+}
+
 .project input {
   display: none;
 }
