@@ -702,6 +702,10 @@ section .subtitle p:last-child {
 .project .project_box .fa-solid {
   font-size: 2.8rem;
   color: #6EA8E8;
+  cursor: pointer;
+}
+.project .project_box .fa-solid:hover {
+  color: #3B82F6;
 }
 .project .project_box.active {
   display: flex;

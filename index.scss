@@ -618,6 +618,10 @@ $title-num:#eee;
     .fa-solid{
       font-size: 2.8rem;
       color: $default-color;
+      cursor: pointer;
+      &:hover{
+        color: $point-color;
+      }
     }
     
   }
